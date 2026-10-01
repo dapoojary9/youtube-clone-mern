@@ -2,23 +2,10 @@
 
 A full-stack YouTube clone built with **MongoDB, Express, React and Node.js**. Users can browse a video feed, search by title, filter by category, sign up / sign in with JWT authentication, watch videos, like/dislike them, manage comments, create their own channel and upload, edit or delete their videos.
 
-![Home page](docs/screenshots/home.jpg)
 
 ---
 
-## Table of contents
-
-1. [Features](#features)
-2. [Tech stack](#tech-stack)
-3. [Folder structure](#folder-structure)
-4. [Getting started](#getting-started)
-5. [Sample accounts](#sample-accounts)
-6. [API reference](#api-reference)
-7. [Data models](#data-models)
-8. [Usage walkthrough](#usage-walkthrough)
-9. [Responsive design](#responsive-design)
-10. [Screenshots](#screenshots)
-11. [Demo video](#demo-video)
+## https://github.com/dapoojary9/youtube-clone-mern
 
 ---
 
@@ -85,54 +72,6 @@ A full-stack YouTube clone built with **MongoDB, Express, React and Node.js**. U
 | Auth | JSON Web Tokens (`jsonwebtoken`), `bcryptjs` |
 | Styling | Plain CSS with CSS variables (no UI framework) |
 | Version control | Git |
-
----
-
-## Folder structure
-
-```
-youtube-clone/
-├── backend/
-│   ├── config/
-│   │   ├── db.js                 # MongoDB connection
-│   │   └── categories.js         # List of video categories
-│   ├── controllers/              # Route handlers (business logic)
-│   │   ├── authController.js
-│   │   ├── channelController.js
-│   │   ├── commentController.js
-│   │   └── videoController.js
-│   ├── middleware/
-│   │   ├── auth.js               # protect / optionalAuth (JWT verification)
-│   │   └── error.js              # 404 + central error handler
-│   ├── models/                   # Mongoose schemas
-│   │   ├── User.js  Channel.js  Video.js  Comment.js
-│   ├── routes/                   # Express routers
-│   │   ├── authRoutes.js  channelRoutes.js  videoRoutes.js  commentRoutes.js
-│   ├── seed/
-│   │   ├── data.js               # Sample users, channels, videos, comments
-│   │   ├── seedDatabase.js       # Inserts sample data with relations
-│   │   └── seed.js               # `npm run seed`
-│   ├── utils/                    # ApiError, asyncHandler, token, validators
-│   ├── app.js                    # Express app (middleware + routes)
-│   ├── server.js                 # Connects DB and starts the server
-│   ├── dev-memory.js             # Optional: run with an in-memory MongoDB
-│   └── .env.example
-├── frontend/
-│   ├── src/
-│   │   ├── api/                  # Axios client + endpoint services
-│   │   ├── components/           # Header, Sidebar, VideoCard, CommentSection, modals...
-│   │   ├── context/              # AuthContext (user/JWT), UIContext (sidebar, theme, toasts)
-│   │   ├── hooks/                # useWindowWidth
-│   │   ├── pages/                # Home, Login, Register, Watch, Channel, CreateChannel, NotFound
-│   │   ├── styles/global.css     # All styles + responsive breakpoints
-│   │   ├── utils/                # formatters + validation
-│   │   ├── App.jsx               # Routes
-│   │   └── main.jsx              # Entry point
-│   ├── index.html
-│   └── .env.example
-├── docs/screenshots/
-└── README.md
-```
 
 ---
 
@@ -285,31 +224,4 @@ Comment  { video→Video, user→User, text*, edited, createdAt }
 | 640–791px | Drawer only, compact header icons |
 | < 640px | Single-column feed with edge-to-edge thumbnails, search opens full-width from the search icon, stacked watch page, 2-column channel grid |
 
----
-
-## Screenshots
-
-| Watch page | Channel page |
-|---|---|
-| ![Watch](docs/screenshots/watch.jpg) | ![Channel](docs/screenshots/channel.jpg) |
-| **Register validation** | **Upload video** |
-| ![Register](docs/screenshots/register-validation.jpg) | ![Upload](docs/screenshots/upload-video.jpg) |
-
-| Mobile home | Mobile watch | Tablet |
-|---|---|---|
-| ![Mobile home](docs/screenshots/mobile-home.jpg) | ![Mobile watch](docs/screenshots/mobile-watch.jpg) | ![Tablet](docs/screenshots/tablet-home.jpg) |
-
----
-
-## Demo video
-
-A short demo showing filtering, search, registration with validation, login, channel creation, video upload/edit/delete, like/dislike and comment add/edit/delete:
-
-**Demo video:** _add your link here (e.g. Google Drive / YouTube unlisted)_
-
----
-
-## Notes
-
-- Seeded videos use real public YouTube videos through the embed player, plus a couple of open-licence MP4 clips.
-- This project was built for learning purposes and is not affiliated with YouTube or Google.
+---# youtube-clone-mern
